@@ -19,8 +19,7 @@ namespace Shop.Controllers
             [FromServices]DataContext context
         )
         {
-            var orders = await context.pedido
-            .Include(x => x.pessoa)
+            var orders = await context.pedido            
             .AsNoTracking()
             .ToListAsync();
             return Ok(orders);
@@ -35,7 +34,6 @@ namespace Shop.Controllers
         )
         {
             var orders = await context.pedido
-            .Include(x => x.pessoa)
             .AsNoTracking()
             .FirstOrDefaultAsync(x => x.id == id);
             return Ok(orders);
