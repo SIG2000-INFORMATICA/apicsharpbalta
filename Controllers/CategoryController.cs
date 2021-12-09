@@ -7,7 +7,7 @@ using Shop.Models;
 
 // Endpint => URL
 // http://localhost:5000 ou https://localhost:5001 
-[Route("categories")]
+[Route("categoria")]
 [ApiController]
 public class CategoryController : ControllerBase
     {
@@ -17,13 +17,13 @@ public class CategoryController : ControllerBase
             [FromServices]DataContext context
         )
         {
-            var categories = await context.Categories.AsNoTracking().ToListAsync();
+            var categories = await context.categoria.AsNoTracking().ToListAsync();
             return Ok(categories);
         } 
         
         [HttpGet]
         [Route("{id:int}")]
-        public async Task<ActionResult<Category>> GetGetById(int id)
+        public async Task<ActionResult<Category>> GetById(int id)
         {
             return new Category();
         } 
@@ -38,7 +38,7 @@ public class CategoryController : ControllerBase
             if(!ModelState.IsValid) 
                 return BadRequest(ModelState);
         try{
-            context.Categories.Add(model);  
+            context.categoria.Add(model);  
             await context.SaveChangesAsync();
             return Ok(model);        
             }
@@ -76,12 +76,12 @@ public class CategoryController : ControllerBase
             [FromServices]DataContext context
         )
         {
-            var category =  await context.Categories.FirstOrDefaultAsync(x=>x.Id ==id);
+            var category =  await context.categoria.FirstOrDefaultAsync(x=>x.id ==id);
             if(category == null)
             return NotFound(new { message = "Categoria não encontrada"});
         
         try{
-            context.Categories.Remove(category); ;  
+            context.categoria.Remove(category); ;  
             await context.SaveChangesAsync();
             return Ok(new { message = "Categoria Removida com sucesso!"});        
             }

@@ -26,9 +26,10 @@ namespace Shop.Data
             base.OnConfiguring(optionsBuilder);
     }
 
-        public DbSet<Product> Products { get; set; }  = null;
-        public DbSet<Category> Categories { get; set; }  = null;
-        public DbSet<User> Users { get; set; } = null;
+        public DbSet<Product> produto { get; set; }  = null;
+        public DbSet<Category> categoria { get; set; }  = null;
+       // public DbSet<User> Users { get; set; } = null;
+        public DbSet<People> pessoa { get; set; } = null;
        
     }
 }

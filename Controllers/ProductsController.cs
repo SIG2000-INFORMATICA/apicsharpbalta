@@ -8,7 +8,8 @@ using Shop.Models;
 
 namespace Shop.Controllers
 {
-     [Route("products")]
+     [Route("produto")]
+     [ApiController]
     public class ProductsController : ControllerBase
     {
         [HttpGet]
@@ -17,8 +18,8 @@ namespace Shop.Controllers
             [FromServices]DataContext context
         )
         {
-            var products = await context.Products
-            .Include(x => x.Category)
+            var products = await context.produto
+            .Include(x => x.categoria)
             .AsNoTracking()
             .ToListAsync();
             return Ok(products);
@@ -31,39 +32,39 @@ namespace Shop.Controllers
             int id
         )
         {
-            var products = await context.Products
-            .Include(x => x.Category)
+            var products = await context.produto
+            .Include(x => x.categoria)
             .AsNoTracking()
-            .FirstOrDefaultAsync(x => x.Id == id);
+            .FirstOrDefaultAsync(x => x.id == id);
             return Ok(products);
         } 
         
          [HttpGet]
-        [Route("categories/{id:int}")]
-        public async Task<ActionResult<List<Product>>> GetByCategoriy(
+        [Route("produto/{id:int}")]
+        public async Task<ActionResult<List<Product>>> GetByproduto(
             [FromServices]DataContext context,
             int id
         )
         {
-            var products = await context.Products
-            .Include(x => x.Category)
+            var products = await context.produto
+            .Include(x => x.categoria)
             .AsNoTracking()
-            .Where(x => x.CategoryId == id)
+            .Where(x => x.categoriaid == id)
             .ToListAsync();
             return Ok(products);
         }  
 
         [HttpPost]
         [Route("")]
-        public async Task<ActionResult<List<Category>>> Post(
-            [FromBody]Category model,
+        public async Task<ActionResult<List<Product>>> Post(
+            [FromBody]Product model,
             [FromServices]DataContext context
             )
         {
             if(!ModelState.IsValid) 
                 return BadRequest(ModelState);
         try{
-            context.Categories.Add(model);  
+            context.produto.Add(model);  
             await context.SaveChangesAsync();
             return Ok(model);        
             }
