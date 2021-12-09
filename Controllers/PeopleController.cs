@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,8 +9,8 @@ using Shop.Models;
 
 namespace Shop.Controllers
 {
-     [Route("pessoa")]
-     [ApiController]
+    [Route("pessoa")]
+    [ApiController]
     public class PeopleController : ControllerBase
     {
         [HttpGet]
@@ -24,9 +25,11 @@ namespace Shop.Controllers
         
         [HttpGet]
         [Route("{id:int}")]
-        public async Task<ActionResult<People>> GetById(int id)
+        public async Task<ActionResult<People>> GetById(int id, 
+        [FromServices]DataContext context
+        )
         {
-            return new People();
+            return await context.Set<People>().FindAsync(id);        
         } 
         
         [HttpPost]
@@ -44,21 +47,21 @@ namespace Shop.Controllers
             return Ok(model);        
             }
         catch{
-            return BadRequest(new  { message = "Não foi possível criar o Cadastro"});
-             }   
+                return BadRequest(new { message = "Não foi possível criar o Cadastro" });
+            }
+        }
 
-        } 
-        
         [HttpPut]
         [Route("{id:int}")]
         public async Task<ActionResult<List<People>>> Put(
-            int id, [FromBody]People model,
-             [FromServices]DataContext context
-             )
+            int id, [FromBody] People model,
+            [FromServices] DataContext context
+            )
         {
-              if(!ModelState.IsValid) 
+            if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-        try{
+            try
+            {
             context.Entry<People>(model).State = EntityState.Modified ;  
             await context.SaveChangesAsync();
             return Ok(model);        
@@ -89,8 +92,7 @@ namespace Shop.Controllers
         catch(DbUpdateConcurrencyException)
         {
             return BadRequest(new  { message = "Não foi possível Atualizar o Cadastro"});
-        }  
-            
+        }              
      } 
     }
 }

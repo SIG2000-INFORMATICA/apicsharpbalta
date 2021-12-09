@@ -12,8 +12,6 @@ namespace Shop.Models
         [MinLength(3, ErrorMessage = "Este campo deve conter entre 3 e 60 caracteres")]
         public string descricao { get; set; }
 
-        // [MaxLength(80, ErrorMessage = "Este campo deve conter no máximo 80 caracteres")]
-
         [Required(ErrorMessage = "Este campo é obrigatório")]
         [Range(1, int.MaxValue, ErrorMessage = "O valor deve ser maior que zero")]
         public decimal preco { get; set; }

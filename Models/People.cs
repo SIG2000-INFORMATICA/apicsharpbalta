@@ -7,7 +7,7 @@ namespace Shop.Models
         [Key]
         public int id { get; set; }
         
-        //[Required(ErrorMessage = "Este campo é obrigatório")]
+        [Required(ErrorMessage = "Este campo é obrigatório")]
         [MaxLength(18, ErrorMessage = "Este campo deve conter entre 14 e 18 caracteres")]
         [MinLength(14, ErrorMessage = "Este campo deve conter entre 14 e 18 caracteres")]     
         public string cgc { get; set; }

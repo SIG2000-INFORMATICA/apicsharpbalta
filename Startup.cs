@@ -41,14 +41,14 @@ namespace Shop
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+            app.UseDeveloperExceptionPage();
             }
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+            endpoints.MapControllers();
             });
         }
     }

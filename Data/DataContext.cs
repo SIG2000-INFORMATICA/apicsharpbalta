@@ -28,8 +28,7 @@ namespace Shop.Data
 
         public DbSet<Product> produto { get; set; }  = null;
         public DbSet<Category> categoria { get; set; }  = null;
-       // public DbSet<User> Users { get; set; } = null;
-        public DbSet<People> pessoa { get; set; } = null;
-       
+        public DbSet<Order> pedido { get; set; } = null;
+        public DbSet<People> pessoa { get; set; } = null;       
     }
 }

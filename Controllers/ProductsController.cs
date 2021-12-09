@@ -39,7 +39,7 @@ namespace Shop.Controllers
             return Ok(products);
         } 
         
-         [HttpGet]
+        [HttpGet]
         [Route("produto/{id:int}")]
         public async Task<ActionResult<List<Product>>> GetByproduto(
             [FromServices]DataContext context,
