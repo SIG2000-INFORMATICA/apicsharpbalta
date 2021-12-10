@@ -52,25 +52,24 @@ namespace Shop.Controllers
         }
 
         [HttpPut]
-        [Route("{id:int}")]
+        [Route("{id}")]
         public async Task<ActionResult<List<People>>> Put(
             int id, [FromBody] People model,
             [FromServices] DataContext context
             )
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+             if (!ModelState.IsValid)
+                 return BadRequest(ModelState);
             try
-            {
-            context.Entry<People>(model).State = EntityState.Modified ;  
+            { 
+            context.Entry(model).Property(x => x.nome).IsModified = true;   
             await context.SaveChangesAsync();
             return Ok(model);        
             }
-        catch(DbUpdateConcurrencyException)
+        catch(DbUpdateConcurrencyException o)
         {
-            return BadRequest(new  { message = "Não foi possível Atualizar o Cadastro"});
+            return BadRequest(new  { message = "Não foi possível Atualizar o Cadastro" + o});
         }  
-
         }  
         
         [HttpDelete]

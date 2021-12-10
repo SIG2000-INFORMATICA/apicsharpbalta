@@ -10,7 +10,7 @@ namespace Shop.Controllers
 {
      [Route("pedido")]
      [ApiController]
-    public class OrderController : ControllerBase
+     public class OrderController : ControllerBase
     {      
         
         [HttpGet]
@@ -37,8 +37,7 @@ namespace Shop.Controllers
             .AsNoTracking()
             .FirstOrDefaultAsync(x => x.id == id);
             return Ok(orders);
-        } 
-              
+        }              
         [HttpPost]
         [Route("")]
         public async Task<ActionResult<List<Order>>> Post(
