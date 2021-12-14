@@ -39,7 +39,7 @@ public class CategoryController : ControllerBase
         }
     }
 
-    /*[HttpPost]
+    [HttpPost]
     [Route("")]
     public async Task<ActionResult<List<Category>>> Post(
         [FromBody] Category model,
@@ -58,28 +58,27 @@ public class CategoryController : ControllerBase
         {
             return BadRequest(new { message = "Não foi possível criar a categoria" });
         }
-    }*/
+    }
 
     [HttpPut]
     [Route("{id:int}")]
-    public async Task<ActionResult<List<Category>>> Put(
-        int id, [FromBody] Category model,
-        [FromServices] DataContext context
-        )
-    {
-        if (!ModelState.IsValid)
+        public async Task<ActionResult<List<Category>>> Put(
+            int id, [FromBody] Category model,
+            [FromServices] DataContext context
+            )
+        {
+            if (!ModelState.IsValid)
             return BadRequest(ModelState);
-        try
-        {
-            context.Entry<Category>(model).State = EntityState.Modified;
+            try
+            { 
+            context.Entry(model).Property(x => x.descricao).IsModified = true;   
             await context.SaveChangesAsync();
-            return Ok(model);
-        }
-        catch (DbUpdateConcurrencyException)
+            return Ok(model);        
+            }
+        catch(DbUpdateConcurrencyException o)
         {
-            return BadRequest(new { message = "Não foi possível Atualizar a categoria" });
-        }
-
+            return BadRequest(new  { message = "Não foi possível Atualizar o Cadastro" + o});
+        }  
     }
 
     [HttpDelete]

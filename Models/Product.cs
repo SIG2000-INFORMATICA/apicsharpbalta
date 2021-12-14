@@ -21,6 +21,6 @@ namespace Shop.Models
         public int categoriaid { get; set; }
 
         public int quantidade { get; set; }
-        public Category categoria { get; set; }
+        // public Category categoria { get; set; }
     }
 }
