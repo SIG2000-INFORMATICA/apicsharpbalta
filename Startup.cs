@@ -19,8 +19,10 @@ namespace Shop
         {
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+                .AddJsonFile("appsettings.Development.json", optional: true, reloadOnChange: true)
+                .AddJsonFile($"appsettings.Development.{env.EnvironmentName}.json", optional: true)
+               // .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)               
+               // .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
         }
@@ -52,11 +54,11 @@ namespace Shop
             {
             app.UseDeveloperExceptionPage();
             }
+            app.UseRouting();
             app.UseAuthentication();
+            app.UseAuthorization();
             app.UseCors("CorsPolicy");
             app.UseHttpsRedirection();
-            app.UseRouting();
-            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
             endpoints.MapControllers();
