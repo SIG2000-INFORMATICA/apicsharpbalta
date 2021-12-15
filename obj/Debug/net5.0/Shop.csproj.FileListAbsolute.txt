@@ -136,3 +136,4 @@ D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\obj\Debug\net5.0\Shop.
 D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\obj\Debug\net5.0\ref\Shop.dll
 D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\obj\Debug\net5.0\Shop.pdb
 D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\obj\Debug\net5.0\Shop.genruntimeconfig.cache
+D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.Certificate.dll

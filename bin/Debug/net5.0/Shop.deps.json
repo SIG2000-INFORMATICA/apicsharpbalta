@@ -33,6 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "Shop/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Authentication.Certificate": "5.0.1",
           "Microsoft.Extensions.Configuration.FileExtensions": "6.0.0",
           "Microsoft.Extensions.Configuration.Json": "6.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "5.0.10",
@@ -313,6 +314,20 @@
         },
         "compile": {
           "Shop.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Certificate/5.0.1": {
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Memory": "5.0.0"
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Authentication.Certificate.dll": {
+            "assemblyVersion": "5.0.1.0",
+            "fileVersion": "5.0.120.60107"
+          }
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Authentication.Certificate.dll": {}
         }
       },
       "Microsoft.EntityFrameworkCore/5.0.10": {
@@ -2297,6 +2312,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.AspNetCore.Authentication.Certificate/5.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jnoUrnMPgrjfSfx0aN5feUzCKE51H0/AwWR4xGRXGg8CmV+5EScwK2koY0Kt7bTTZm/vleDkT+kcvumwD3A9Iw==",
+      "path": "microsoft.aspnetcore.authentication.certificate/5.0.1",
+      "hashPath": "microsoft.aspnetcore.authentication.certificate.5.0.1.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore/5.0.10": {
       "type": "package",
