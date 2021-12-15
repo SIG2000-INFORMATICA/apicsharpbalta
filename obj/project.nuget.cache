@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mjxXF478it2wi8dg1e5jDndmCI5Y7PsOzUOv/obuSKAqKkn2wtUFbzKA9aa+JUa2oTOgdP6qeIwJty4sk9AXdA==",
+  "dgSpecHash": "KC2FBjs4iRns9/sHkL9FCzOb8r1PGX92MtEMitzcT1LLd8DOeButyg6plTFx0OEO+x08ves4ofDyInG9chds5w==",
   "success": true,
-  "projectFilePath": "D:\\DESENVOLVIMENTO-II\\Csharp\\ApiBalta\\Shop\\Shop.csproj",
+  "projectFilePath": "D:\\DESENVOLVIMENTO-II\\Csharp\\ApiBalta\\Shop\\apicsharpbalta\\Shop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tiago.andrade\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.10\\microsoft.entityframeworkcore.5.0.10.nupkg.sha512",
     "C:\\Users\\tiago.andrade\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.10\\microsoft.entityframeworkcore.abstractions.5.0.10.nupkg.sha512",

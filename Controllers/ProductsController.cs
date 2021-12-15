@@ -8,8 +8,8 @@ using Shop.Models;
 
 namespace Shop.Controllers
 {
-     [Route("produto")]
-     [ApiController]
+    [Route("produto")]
+    [ApiController]
     public class ProductsController : ControllerBase
     {
         [HttpGet]
@@ -19,7 +19,7 @@ namespace Shop.Controllers
         )
         {
             var products = await context.produto
-            .Include(x => x.categoria)
+            // .Include(x => x.categoria)
             .AsNoTracking()
             .ToListAsync();
             return Ok(products);
@@ -33,7 +33,7 @@ namespace Shop.Controllers
         )
         {
             var products = await context.produto
-            .Include(x => x.categoria)
+            .Include(x => x.categoriaid)
             .AsNoTracking()
             .FirstOrDefaultAsync(x => x.id == id);
             return Ok(products);
@@ -47,7 +47,7 @@ namespace Shop.Controllers
         )
         {
             var products = await context.produto
-            .Include(x => x.categoria)
+            .Include(x => x.categoriaid)
             .AsNoTracking()
             .Where(x => x.categoriaid == id)
             .ToListAsync();
