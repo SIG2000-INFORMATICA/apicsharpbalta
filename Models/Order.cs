@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Shop.Models
@@ -12,7 +13,7 @@ namespace Shop.Models
 
         [Required(ErrorMessage = "Este campo é obrigatório")]    
         public int idPessoa { get; set; }
+        public List<OrderItem> orderItem { get; set; }
         public decimal total { get; set; }
-        //public People pessoa { get; set; }
     }
 }
