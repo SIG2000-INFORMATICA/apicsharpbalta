@@ -25,10 +25,12 @@ namespace Shop.Data
             optionsBuilder.UseNpgsql(_connectionString);
             base.OnConfiguring(optionsBuilder);
     }
-        public DbSet<Product> produto { get; set; }  = null;
-        public DbSet<Category> categoria { get; set; }  = null;
-        public DbSet<Order> pedido { get; set; } = null;
-        public DbSet<OrderItem> pedido_item { get; set; } = null;
-        public DbSet<People> pessoa { get; set; } = null;       
+        public DbSet<Produto> produto { get; set; }  = null;
+        public DbSet<Categoria> categoria { get; set; }  = null;
+        public DbSet<Pedido> pedido { get; set; } = null;
+        public DbSet<PedidoItem> pedido_item { get; set; } = null;
+        public DbSet<Cliente> cliente { get; set; } = null;
+        public DbSet<Vendedor> vendedor { get; set; } = null;
+
     }
 }

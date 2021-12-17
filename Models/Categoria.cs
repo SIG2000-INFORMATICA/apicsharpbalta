@@ -1,9 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Shop.Models
-{
-    public class Category
-    {
+namespace Shop.Models {
+    public class Categoria {
         [Key]
         public int id { get; set; }
                 

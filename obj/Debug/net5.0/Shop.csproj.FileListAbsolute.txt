@@ -106,7 +106,6 @@ D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\bin\Debug\net5.0\Micro
 D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Abstractions.dll
 D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\bin\Debug\net5.0\Microsoft.Extensions.Configuration.FileExtensions.dll
 D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Json.dll
-D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
 D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Abstractions.dll
 D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Physical.dll
 D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\bin\Debug\net5.0\Microsoft.Extensions.FileSystemGlobbing.dll
@@ -117,7 +116,6 @@ D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\bin\Debug\net5.0\Npgsq
 D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
 D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\bin\Debug\net5.0\System.Text.Encodings.Web.dll
 D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\bin\Debug\net5.0\System.Text.Json.dll
@@ -137,3 +135,5 @@ D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\obj\Debug\net5.0\ref\S
 D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\obj\Debug\net5.0\Shop.pdb
 D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\obj\Debug\net5.0\Shop.genruntimeconfig.cache
 D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.Certificate.dll
+D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\bin\Debug\net5.0\Humanizer.dll
+D:\DESENVOLVIMENTO-II\Csharp\ApiBalta\Shop\apicsharpbalta\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
