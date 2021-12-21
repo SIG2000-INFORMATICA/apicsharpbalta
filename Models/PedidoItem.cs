@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Newtonsoft.Json;
 
 namespace Shop.Models {
     public class PedidoItem {       
@@ -17,6 +18,7 @@ namespace Shop.Models {
         [ForeignKey("pedidoId")]
         public virtual Pedido pedido { get; set; }  
 
+        [JsonIgnore]
         [ForeignKey("produtoId")]
         public virtual Produto produto { get; set; }
         public int qtd { get; set; }

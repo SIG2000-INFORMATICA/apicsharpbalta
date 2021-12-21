@@ -25,14 +25,14 @@ namespace Shop.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Pedido>>> Getpedido()
         {
-            return await _context.pedido.ToListAsync();
+            return await _context.pedido.Include(p => p.pedidoItems).ToListAsync();
         }
 
         // GET: api/Pedido/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Pedido>> GetPedido(int id)
         {
-            var pedido = await _context.pedido.FindAsync(id);
+            var pedido = await _context.pedido.Include(p => p.pedidoItems).FirstOrDefaultAsync();
 
             if (pedido == null)
             {
