@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Newtonsoft.Json;
 
 namespace Shop.Models {
     public class Pedido {
@@ -15,9 +16,11 @@ namespace Shop.Models {
         [Column("vendedor_id")] 
         public int vendedorId { get; set; }
 
+        [JsonIgnore]
         [ForeignKey("clienteId")]
         public virtual Cliente cliente { get; set; }
 
+        [JsonIgnore]
         [ForeignKey("vendedorId")]
         public virtual Vendedor vendedor { get; set; }
 
