@@ -15,6 +15,7 @@ namespace Shop.Models {
         [Column("produto_id")] 
         public int produtoId { get; set; }  
 
+        [JsonIgnore]
         [ForeignKey("pedidoId")]
         public virtual Pedido pedido { get; set; }  
 

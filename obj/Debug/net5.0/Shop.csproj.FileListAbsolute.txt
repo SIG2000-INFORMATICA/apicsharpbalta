@@ -185,3 +185,6 @@ C:\Users\Jonathan\Desktop\github\apicsharpbalta\obj\Debug\net5.0\staticwebassets
 C:\Users\Jonathan\Desktop\github\apicsharpbalta\obj\Debug\net5.0\Shop.RazorTargetAssemblyInfo.cache
 C:\Users\Jonathan\Desktop\github\apicsharpbalta\obj\Debug\net5.0\Shop.csproj.CopyComplete
 C:\Users\Jonathan\Desktop\github\apicsharpbalta\obj\Debug\net5.0\Shop.genruntimeconfig.cache
+C:\Users\Jonathan\Desktop\github\apicsharpbalta\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Jonathan\Desktop\github\apicsharpbalta\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Jonathan\Desktop\github\apicsharpbalta\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
